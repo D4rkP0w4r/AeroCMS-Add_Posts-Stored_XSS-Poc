@@ -8,7 +8,7 @@ Even when displaying, the entity cannot be properly encoded
 -------------------------------------------------------------
 ![image](https://user-images.githubusercontent.com/79050415/156879926-c7009ae0-54b5-4b5c-a49f-6c693ce8f2e5.png)
  * Request
-`POST http://localhost:8080/AeroCMS/admin/posts.php?source=edit_post&p_id=28 HTTP/1.1
+```c POST http://localhost:8080/AeroCMS/admin/posts.php?source=edit_post&p_id=28 HTTP/1.1
 Host: localhost:8080
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
@@ -55,4 +55,6 @@ Content-Disposition: form-data; name="post_content"
 Content-Disposition: form-data; name="update_post"
 
 Edit Post
------------------------------85448121341942511952219062291--`
+-----------------------------85448121341942511952219062291--
+```
+
