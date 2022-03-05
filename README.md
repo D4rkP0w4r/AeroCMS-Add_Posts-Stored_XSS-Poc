@@ -1,4 +1,4 @@
-# AeroCMS-Poc
+# AeroCMS-Stored_XSS-Poc
 * `add_post.php`
 ![image](https://user-images.githubusercontent.com/79050415/156879687-273b903a-195c-4313-be7a-b4053ecae897.png)
 When inserting into the database, the input is not filtered out of html characters
