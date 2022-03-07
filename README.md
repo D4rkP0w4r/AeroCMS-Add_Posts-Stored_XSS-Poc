@@ -1,4 +1,5 @@
 # AeroCMS-Add_Posts-Stored_XSS-Poc
+## Step to Reproduct
 * Login to admin panel -> `Posts` -> `Add Posts` -> `Post Title` -> inject payload `<img/src/onerror=prompt(10)>` -> The XSS will trigger when clicked `Edit Post` button
 ![image](https://user-images.githubusercontent.com/79050415/156887124-fb539ece-2ad1-4ebd-9ce9-6fcfd688b36e.png)
 ![image](https://user-images.githubusercontent.com/79050415/156879926-c7009ae0-54b5-4b5c-a49f-6c693ce8f2e5.png)
